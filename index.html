@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complejo Montemolino | Home</title>
+    <link rel="icon" href="img/logo_header.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body class="bodyIndex">
+    <header>
+            <img src="img/logo_header.png" alt="Logo Montemolino" id="LogoHeader">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="pages/el_complejo.html">EL COMPLEJO</a></li>
+                        <li><a href="pages/reservar_suite.html" id="reservarSuite">RESERVAR SUITE</a></li>
+                        <li><a href="pages/reseñas_de_montemolino.html">RESEÑAS DE MONTEMOLINO</a></li>
+                        <li><a href="pages/ubicación.html">UBICACIÓN</a></li>
+                        <li><a href="pages/contacto.html">CONTACTO</a></li>
+                    </ul>
+            </nav>
+            <img src="img/español.png" alt="Idioma español" id="spanish">
+            <img src="img/english.png" alt="English lenguage" id="english">
+            <img src="img/logo_mobile.png" alt="" id="logoMobile">
+            <img src="img/burger_menu.png" alt="" id="burgerMenu">
+    </header>
+    
+    <section class="sectionIndex">
+                <div>
+                    <img src="img/logo_header.png" alt="Logo Montemolino" id="logoCentral" class="animate__animated animate__fadeInDown">
+                    <h1 class="animate__animated animate__fadeInUp"  id="tituloIndex">LA TRANQUILIDAD DEL BOSQUE,<br>
+                    A PASOS DEL MAR.</h1>
+                </div>
+    </section>
+
+    <footer class="footerIndex">
+        <div>
+            <a href="https://www.instagram.com/montemolinost" target="_blank"><img src="img/ícono_instagram.png" alt="Instagram" id="instagram"></a>
+            <a href="https://wa.me/542246447593?text=¡Hola!+Me+gustaría+realizar+una+consulta" target="_blank"><img src="img/ícono_whatsapp.png" id="whatsapp"></a>
+        </div>
+        <h4>CONSULTA DISPONIBILIDAD</h4>
+        <div class="formularioReserva">
+            <form>
+                <label for="start">CHECK-IN:</label>
+                    <input type="date" value="2022-12-01" name="start" min="2022-12-01" max="2023-03-30" required pattern="\d{4}-\d{2}-\d{2}/">
+                <label for="finish">CHECK-OUT:</label>
+                    <input type="date" value="2022-12-02" name="finish" min="2022-12-02" max="2023-03-31" required pattern="\d{4}-\d{2}-\d{2}/">
+                <button id="botonIr">IR</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+
+</html>
