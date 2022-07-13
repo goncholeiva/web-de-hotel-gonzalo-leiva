@@ -7,13 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complejo Montemolino | Home</title>
     <link rel="icon" href="img/logo_header.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body class="bodyIndex">
     <header>
-            <img src="img/logo_header.png" alt="Logo Montemolino" id="LogoHeader">
+
+        <nav class="navbar navbar-expand-lg col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="container-fluid">
+                <img src="img/logo_header.png" alt="Logo Montemolino" id="LogoHeader" class="ps-3">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="d-flex justify-content-end pe-3">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="pages/el_complejo.html">EL COMPLEJO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="pages/reservar_suite.html" id="reservarSuite">RESERVAR SUITE</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="pages/reseñas_de_montemolino.html">RESEÑAS DE MONTEMOLINO</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="pages/ubicación.html">UBICACION</a>
+                  </li> 
+                  <li class="nav-item" id="noBorder">
+                    <a class="nav-link active" aria-current="page" href="pages/contacto.html">CONTACTO</a>
+                  </li> 
+                </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+            <!--<img src="img/logo_header.png" alt="Logo Montemolino" id="LogoHeader">
             <nav>
                 <div>
                     <ul>
@@ -27,15 +59,29 @@
             <img src="img/español.png" alt="Idioma español" id="spanish">
             <img src="img/english.png" alt="English lenguage" id="english">
             <img src="img/logo_mobile.png" alt="" id="logoMobile">
-            <img src="img/burger_menu.png" alt="" id="burgerMenu">
+            <img src="img/burger_menu.png" alt="" id="burgerMenu">-->
     </header>
     
     <section class="sectionIndex">
-                <div>
-                    <img src="img/logo_header.png" alt="Logo Montemolino" id="logoCentral" class="animate__animated animate__fadeInDown">
-                    <h1 class="animate__animated animate__fadeInUp"  id="tituloIndex">LA TRANQUILIDAD DEL BOSQUE,<br>
-                    A PASOS DEL MAR.</h1>
+                
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/imagen_de_fondo_index.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/imagen_de_fondo_suites.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/imagen_de_fondo_contacto.png" class="d-block w-100" alt="...">
+              </div>
+              <div id="divCentral">  
+                <img src="img/logo_header.png" alt="Logo Montemolino" id="logoCentral" class="animate__animated animate__fadeInDown">
+                <h1 class="animate__animated animate__fadeInUp" id="tituloIndex">LA TRANQUILIDAD DEL BOSQUE,<br>
+                A PASOS DEL MAR.</h1>
                 </div>
+            </div>
+          </div>
     </section>
 
     <footer class="footerIndex">
@@ -54,6 +100,8 @@
             </form>
         </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
 
