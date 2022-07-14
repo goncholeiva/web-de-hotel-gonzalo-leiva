@@ -21,27 +21,10 @@ header {
 
 #LogoHeader {
     width: 64px;
-    margin-right: 38%;
-}
-
-#logoMobile {
-    display: none;
 }
 
 #linkLogoHeader {
     width: 64px;
-    margin-right: 38%;
-}
-
-@media (min-width:1920px){
-    #LogoHeader {
-        width: 64px;
-        margin-right: 50%;
-    }
-    #linkLogoHeader {
-        width: 64px;
-        margin-right: 50%;
-    }
 }
 
 nav ul {
@@ -74,42 +57,101 @@ nav ul li a:hover {
     color: #701726;
 }
 
-#spanish {
-    width: 38px;
+@media (min-width:1200px){
+    #LogoHeader {
+        width: 80px;
+    }
+    #linkLogoHeader {
+        width: 80px;
+    }
 }
 
-#english {
-    width: 38px;
-    margin-right: 2%;
+@media (max-width:991px){
+    nav ul li {
+    border-right: none;
+    }
 }
 
 /* SECTION INDEX */ 
 
 .bodyIndex {
     display: grid;
-    grid-template-rows: auto auto 70px;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "header" "sectionIndex" "footerIndex";
 }
 
-.sectionIndex {
+#sectionIndex {
     grid-area: sectionIndex;
-}
-
-#divCentral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 84vh;
+    overflow: hidden;
 }
 
-#logoCentral {
-    margin: auto;
+.carousel-item {
+    height: 84vh;
+}
+
+.divCentral {
+    position: absolute;
 }
 
 #tituloIndex {
-    justify-content: end;
+    font-family: lora;
     text-align: center;
     color: white;
-    font-size: 2.4rem;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+    font-size: 3rem;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
+
+@media (max-width:1023px) {
+    #carouselExampleSlidesOnly {
+        display: none;
+    }
+    #sectionIndex {
+        background-image: url(../img/background_img/index_tablet.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width:991px) {
+    #logoCentral {
+        width: 80px;
+    }
+    #tituloIndex {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:915px) {
+    #sectionIndex {
+        background-image: url(../img/background_img/index_medium.jpg);
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width:500px) {
+    #sectionIndex {
+        background-image: url(../img/background_img/index_mobile.jpg);
+        background-repeat: no-repeat;
+    }
+    #logoCentral {
+        width: 60px;
+    }
+    #tituloIndex {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:376px) {
+    #tituloIndex {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* FOOTER INDEX */
 
@@ -122,149 +164,66 @@ nav ul li a:hover {
     border-top: 7px solid #D5CCB4;
 }
 
-.footerIndex h4 {
-    color: white;
-    margin-bottom: 10px;
-    padding: 10px;
-    margin-left: 35%;
+#instagram {
+    width: 40px;
+    margin: 10px;
+    margin-left: 30px;
+}
+
+#whatsapp {
+    width: 35px;
+    margin: 10px;
 }
 
 .formularioReserva {
-    margin-right: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: lora;
+    font-size: 16px;
+    color: white;
+    margin-right: 35px;
 }
 
-.footerIndex div form {
-    margin-bottom: 10px;
-    color: white;
-    padding: 10px;
-    margin-left: 50px;
+.footerIndex label {
+    margin-left: 15px;
+}
+
+.footerIndex input {
+    height:25px;
+    width: 115px;
+    font-size: 16px;
 }
 
 #botonIr {
     background-color: #D5CCB4;
     color: #701726;
-    font-family: lora;
     border: 2px;
-    padding-left: 5px;
-    padding-top: 1px;
-    padding-right: 5px;
-    padding-bottom: 1px;
-    margin-left: 5px;
+    width: 20px;
+    height: 23px;
 }
 
-#instagram {
-    width: 40px;
-    top: 50%;
-    margin-left: 35px;
-    padding: 10px;
-}
-
-#whatsapp {
-    width: 35px;
-    top: 50%;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 10px;
-}
-
-@media (max-width:415px){
-    .bodyIndex{
-        display: grid;
-        grid-template-rows: 65px auto 70px;
-        grid-template-areas: "header" "sectionIndex" "footerIndex";
-    }
-    header {
-        grid-area: header;
-        display: flex;
-        height: 65px;
-    }
-    #LogoHeader {
+@media (max-width:894px){
+    #labelP {
         display: none;
     }
-    #logoMobile {
-        display: block;
-        margin-right: 32%;
-        width: 230px;
-        margin-top: 10px;
-    }
-    #burgerMenu {
-        display: block;
-        width: 8px;
-        margin-right: 5%;
-    }
-    nav {
-        display: none;
-    }
-    #spanish {
-        display: none;
-    }
-    #english {
-        display: none;
-    }
-    .sectionIndex {
-        background-image: url(../img/index_mobile.jpg);
-        height: 773px;
-        width: 100%;
-    }
-    #logoCentral {
-        margin-left: 36%;
-    }
-    
-    #tituloIndex {
-        font-size: 1.3rem;
-    }
-    .formularioReserva {
-        display: none;
-    }
-    .footerIndex {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-    }
-    .footerIndex h4 {
-        margin-bottom: 25px;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 20px;
-        font-size: 16px;
-    }
-    #instagram {
-        width: 40px;
-        margin-left: 5px;
-        margin-bottom: 0;
-    }
-    #whatsapp {
-        width: 35px;
-        top: 50%;
-        margin-left: -5px;
-        margin-bottom: 0;
+    .footerIndex label {
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width:391px){
-    .sectionIndex {
-        height: 702px;
+@media (max-width:657px) {
+    .footerIndex input {
+        width: 25px;
     }
 }
 
-@media (max-width:376px){
-    #logoMobile {
-        margin-right: 30%;
+@media (max-width:476px) {
+    .footerIndex label {
+        display: none;
     }
-    .sectionIndex {
-        height: 525px;
-    }
-}
-
-@media (max-width:361px){
-    .sectionIndex {
-        height: 598px;
-    }
-    #logoMobile {
-        margin-right: 25%;
-    }
-    .footerIndex h4 {
-        margin-right: 15px;
+    .footerIndex input {
+        margin-bottom: 20px;
     }
 }
 
