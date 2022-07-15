@@ -5,59 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--TITLE & ICON-->
     <title>Complejo Montemolino | The place</title>
     <link rel="icon" href="../img/logo_header.png">
+    <!--BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
+    <!--ANIMACIONES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body class="bodyComplejo">
-    
-    <header>
-        <a href="../index.html" id="linkLogoHeader"><img src="../img/logo_header.png" alt="Logo Montemolino" id="LogoHeader"></a>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="el_complejo.html">EL COMPLEJO</a></li>
-                    <li><a href="reservar_suite.html" id="reservarSuite">RESERVAR SUITE</a></li>
-                    <li><a href="reseñas_de_montemolino.html">RESEÑAS DE MONTEMOLINO</a></li>
-                    <li><a href="ubicación.html">UBICACIÓN</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
-        </nav>
-        <img src="../img/español.png" alt="Idioma español" id="spanish">
-        <img src="../img/english.png" alt="English lenguage" id="english">
-</header>
-
-<section class="containerComplejo">
+  <!--HEADER-->  
+  <header>
+    <nav class="navbar navbar-expand-lg col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="container-fluid">
+        <a href="../index.html" id="linkLogoHeader"><img src="../img/logo_header.png" alt="Logo Montemolino" id="LogoHeader" class="ps-3"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex justify-content-end pe-3">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="el_complejo.html">EL COMPLEJO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="reservar_suite.html" id="reservarSuite">RESERVAR SUITE</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="reseñas_de_montemolino.html">RESEÑAS DE MONTEMOLINO</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ubicación.html">UBICACION</a>
+              </li> 
+              <li class="nav-item" id="noBorder">
+                <a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--SECTION-->
+  <section class="containerComplejo">
     <div>
         <img src="../img/imágenes_del_complejo.png" alt="Imágenes del complejo" id="complejoImg">
     </div>
-</section>
-
-<aside>
-        <h2 class="animate__animated animate__fadeInDown" id="subtituloComplejo">
-            CREADOS PARA EL RELAX
-        </h2>
-            <h1 class="animate__animated animate__fadeInRight">Descubre <br>
-                nuestros <br>
-                <div id="espacios">espacios.</div>
-            </h1>
-        <p class="animate__animated animate__fadeInUp">
-            Nuestro complejo está ubicado en Santa Teresita sobre el monte, <br>
-            Partido de La Costa, Buenos Aires. Estamos rodeados de bosque <br>
-            y a 10 minutos caminando o 2 minutos en vehículo de la playa, <br>
-            a 15 minutos caminando del centro urbano y a solo 150mts. <br>
-            del paseo comercial "Camino del Jagüel".
-            <br>
-            <br>
-            Montemolino está preparado para que nuestros huéspedes <br>
-            disfruten de un ambiente natural único y se relajen a la vez <br>
-            que se desconectan de la rutina del día a día de la ciudad. <br>
-        </p>
-</aside>
-    
-
+  </section>
+  <!--ASIDE-->
+  <aside>
+    <h2 class="animate__animated animate__fadeInDown" id="subtituloComplejo">
+        CREADOS PARA EL RELAX
+    </h2>
+    <h1 class="animate__animated animate__fadeInRight">Descubre <br>
+        nuestros <br>
+        <div id="espacios">espacios.</div>
+    </h1>
+    <p class="animate__animated animate__fadeInUp">
+        Nuestro complejo está ubicado en Santa Teresita sobre el monte, <br>
+        Partido de La Costa, Buenos Aires. Estamos rodeados de bosque <br>
+        y a 10 minutos caminando o 2 minutos en vehículo de la playa, <br>
+        a 15 minutos caminando del centro urbano y a solo 150mts. <br>
+        del paseo comercial "Camino del Jagüel".
+        <br>
+        <br>
+        Montemolino está preparado para que nuestros huéspedes <br>
+        disfruten de un ambiente natural único y se relajen a la vez <br>
+        que se desconectan de la rutina del día a día de la ciudad. <br>
+    </p>
+  </aside>
+<!--SECTION-->
 <section class="servicios">
     <div>
         <h3>CONTAMOS CON VARIEDAD DE SERVICIOS Y COMODIDADES PARA SU DISFRUTE</h3>
@@ -71,49 +91,36 @@
             <li><img src="../img/café_ícono.png" alt="Zona café"></li>
             <li><img src="../img/descuentos_íconos.png" alt="Descuentos en comercios amigos"></li>
         </ul>
-        <ul id="listaServicios">
-            <li>RESTAURANTE<br>
-                EN EL COMPLEJO</li>
-            <li id="solarium">JARDÍN<br>
-                SOLARIUM</li>
-            <li id="piscina">PISCINA<br>
-                CLIMATIZADA</li>
-            <li id="wifi">ÁREAS<br>
-                WI-FI</li>
-            <li id="cafe">ZONA CAFÉ</li>
-            <li>DESCUENTOS EN<br>
-                COMERCIOS AMIGOS</li>
-        </ul>
     </div>       
 </section>
-
+<!--SECTION-->
 <section class="containerServicios">
     <div class="serviciosPadre"></div>      
 </section>
-
-    <footer class="footerComplejo">
-        
-        <div class="listaContactos">
-            <h2 id="opcionesDeContacto">PODES CONTACTARNOS A TRAVES DE:</h2>
-            <ul class="apps">
-                <li>WHATSAPP</li>
-                <li>FACEBOOK</li>
-                <li>INSTAGRAM</li>
-                <li>DIRECCIÓN</li>
-            </ul>
-            <ul class="datosContacto">
-                <li>(2246) 44-7593</li>
-                <li id="mmfacebook">@MonteMolino</li>
-                <li id="mminstagram">@montemolino.st</li>
-                <li id="mmadress">Av. Entre Ríos 380, Santa Teresita.</li>
-            </ul>
-         </div>
-         <div class="empresa">
-            <p>
-                Sitio web realizado por Gonzalo Leiva
-            </p>
-         </div>
-    </footer>
+<footer class="footerComplejo">
+    <div class="listaContactos">
+        <h2 id="opcionesDeContacto">PODES CONTACTARNOS A TRAVES DE:</h2>
+        <ul class="apps">
+            <li id="mmwp">WHATSAPP</li>
+            <li id="facebook">FACEBOOK</li>
+            <li>INSTAGRAM</li>
+            <li id="adress">DIRECCIÓN</li>
+        </ul>
+        <ul class="datosContacto">
+            <li>(2246) 44-7593</li>
+            <li id="mmfacebook">@MonteMolino</li>
+            <li id="mminstagram">@montemolino.st</li>
+            <li id="mmadress">Av. Entre Ríos 380, Santa Teresita.</li>
+        </ul>
+    </div>
+    <div class="empresa">
+        <p>
+          Sitio web realizado por Gonzalo Leiva
+        </p>
+    </div>
+</footer>
+<!--BOOTSTRAP JS-->  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 
 </html>
