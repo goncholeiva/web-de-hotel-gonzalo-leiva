@@ -13,6 +13,48 @@
     src: url(../fonts/Poppins-ExtraLight.ttf);
 }
 
+/*DESAFIO SASS II*/
+$colores: 'blue', 'pink', 'white';
+
+@each $color in $colores {
+    .#{$color} {
+        color:#{$color}
+    }
+}
+
+$redes: (
+    fcb: blue,
+    ig: red,
+    mail: white
+);
+@each $red, $color in $redes{
+    .#{$red} {
+        color: $color;
+    }
+}
+
+.button {
+    color: white;
+    text-align: center;
+    width: 2rem;
+}
+
+.button-1 {
+    @extend .button;
+    height: 30px;
+}
+
+@mixin grid-white-center {
+    display: grid;
+    color: white;
+    align-items: center;
+}
+
+.caja {
+    @include grid-white-center
+}
+/*DESAFIO SASS II*/
+
 /* HEADER */
 
 header {
@@ -66,8 +108,6 @@ header {
     border-right: none;
     }
 }
-
-
 
 
 
