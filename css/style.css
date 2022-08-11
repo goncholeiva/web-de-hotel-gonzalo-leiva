@@ -9,48 +9,6 @@
   font-family: poppins;
   src: url(../fonts/Poppins-ExtraLight.ttf);
 }
-/*DESAFIO SASS II*/
-.blue {
-  color: blue;
-}
-
-.pink {
-  color: pink;
-}
-
-.white {
-  color: white;
-}
-
-.fcb {
-  color: blue;
-}
-
-.ig {
-  color: red;
-}
-
-.mail {
-  color: white;
-}
-
-.button, .button-1 {
-  color: white;
-  text-align: center;
-  width: 2rem;
-}
-
-.button-1 {
-  height: 30px;
-}
-
-.caja {
-  display: grid;
-  color: white;
-  align-items: center;
-}
-
-/*DESAFIO SASS II*/
 /* HEADER */
 header {
   grid-area: header;
@@ -84,9 +42,13 @@ header nav ul li a {
 header nav ul li a:hover {
   color: white !important;
 }
-
-#noBorder {
+header nav ul #noBorder {
   border-right: none;
+}
+header nav .navbar-toggler,
+header nav .navbar-toggler-icon {
+  outline: none;
+  border: none;
 }
 
 @media (min-width: 1200px) {
@@ -99,50 +61,88 @@ header nav ul li a:hover {
 }
 @media (max-width: 991px) {
   nav ul li {
-    border-right: none;
+    border-right: none !important;
   }
 }
 /* SECTION INDEX */
 .bodyIndex {
   display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header" "sectionIndex" "footerIndex";
+  grid-template-rows: auto auto;
+  grid-template-areas: "header" "sectionIndex";
+  overflow: hidden;
 }
-
-#sectionIndex {
+.bodyIndex #sectionIndex {
   grid-area: sectionIndex;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 84vh;
+  height: 93vh;
   overflow: hidden;
 }
-
-.carousel-item {
-  height: 84vh;
+.bodyIndex .carousel-item {
+  height: 93vh;
 }
-
-.divCentral {
+.bodyIndex .divCentral {
   position: absolute;
 }
-
-#tituloIndex {
+.bodyIndex .divCentral #tituloIndex {
   font-family: lora;
   text-align: center;
   color: white;
   font-size: 3rem;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
+.bodyIndex .divCentral #instagram {
+  width: 40px;
+  margin-top: 100px;
+  transition: 0.5s;
+}
+.bodyIndex .divCentral #instagram:hover {
+  width: 45px;
+}
+.bodyIndex .divCentral #whatsapp {
+  width: 35px;
+  margin-top: 100px;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+.bodyIndex .divCentral #whatsapp:hover {
+  width: 45px;
+}
 
-@media (max-width: 1023px) {
-  #carouselExampleSlidesOnly {
-    display: none;
-  }
+@media (min-width: 1920px) {
   #sectionIndex {
-    background-image: url(../img/background_img/index_tablet.jpg);
+    height: 95vh;
+  }
+  #sectionIndex .carousel-item {
+    height: 95vh;
+  }
+}
+@media (min-width: 1400px) {
+  #sectionIndex {
+    height: 93vh;
+  }
+  #sectionIndex .carousel-item {
+    height: 93vh;
+  }
+}
+@media (min-width: 1366px) {
+  #sectionIndex {
+    height: 100vh;
+  }
+  #sectionIndex .carousel-item {
+    height: 100vh;
+  }
+}
+@media (max-width: 1023px) {
+  #sectionIndex {
+    background-image: url(../img/index/backgrounds/index_tablet.jpg);
     background-repeat: no-repeat;
+  }
+  #sectionIndex #carouselExampleSlidesOnly {
+    display: none;
   }
 }
 @media (max-width: 991px) {
@@ -155,19 +155,19 @@ header nav ul li a:hover {
 }
 @media (max-width: 915px) {
   #sectionIndex {
-    background-image: url(../img/background_img/index_medium.jpg);
+    background-image: url(../img/index/backgrounds/index_medium.jpg);
     background-repeat: no-repeat;
   }
 }
 @media (max-width: 500px) {
   #sectionIndex {
-    background-image: url(../img/background_img/index_mobile.jpg);
+    background-image: url(../img/index/backgrounds/index_mobile.jpg);
     background-repeat: no-repeat;
   }
-  #logoCentral {
+  #sectionIndex #logoCentral {
     width: 60px;
   }
-  #tituloIndex {
+  #sectionIndex #tituloIndex {
     font-size: 1.4rem;
   }
 }
@@ -176,96 +176,23 @@ header nav ul li a:hover {
     font-size: 1.2rem;
   }
 }
-/* FOOTER INDEX */
-.footerIndex {
-  grid-area: footerIndex;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  background-color: #AA9D7A;
-  border-top: 7px solid #D5CCB4;
-}
-
-#instagram {
-  width: 40px;
-  margin: 10px;
-  margin-left: 30px;
-}
-
-#whatsapp {
-  width: 35px;
-  margin: 10px;
-}
-
-.formularioReserva {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  font-family: lora;
-  font-size: 16px;
-  color: white;
-  margin-right: 35px;
-}
-
-.footerIndex label {
-  margin-left: 15px;
-}
-
-.footerIndex input {
-  height: 25px;
-  width: 115px;
-  font-size: 16px;
-}
-
-#botonIr {
-  background-color: #D5CCB4;
-  color: #701726;
-  border: 2px;
-  width: 20px;
-  height: 23px;
-}
-
-@media (max-width: 894px) {
-  #labelP {
-    display: none;
-  }
-  .footerIndex label {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 657px) {
-  .footerIndex input {
-    width: 25px;
-  }
-}
-@media (max-width: 476px) {
-  .footerIndex label {
-    display: none;
-  }
-  .footerIndex input {
-    margin-bottom: 20px;
-  }
-}
-/* EL COMPLEJO PAGE */
+/* EL COMPLEJO */
 .bodyComplejo {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: "header header" "containerComplejo aside" "servicios servicios" "containerServicios containerServicios" "footerComplejo footerComplejo";
 }
-
-.containerComplejo {
+.bodyComplejo .containerComplejo {
   grid-area: containerComplejo;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
-
-#complejoImg {
+.bodyComplejo .containerComplejo #complejoImg {
   width: 100%;
 }
-
-aside {
+.bodyComplejo aside {
   grid-area: aside;
   background-color: #2A251F;
   display: flex;
@@ -273,39 +200,51 @@ aside {
   align-items: flex-start;
   justify-content: center;
 }
-
-#subtituloComplejo {
+.bodyComplejo aside #subtituloComplejo {
   font-family: poppins;
   color: white;
   font-size: 16px;
   margin-left: 5%;
   margin-bottom: 15px;
 }
-
-aside h1 {
+.bodyComplejo aside h1 {
   color: white;
   font-size: 90px;
   line-height: 70px;
   letter-spacing: 3px;
   margin-left: 5%;
 }
-
-#espacios {
+.bodyComplejo aside h1 #espacios {
   color: #E8CB9D;
 }
-
-aside p {
+.bodyComplejo aside p {
   color: white;
   margin-left: 5%;
   margin-top: 40px;
   font-size: 16px;
 }
-
-.servicios {
+.bodyComplejo .servicios {
   display: none;
+  grid-area: servicios;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.containerServicios {
+.bodyComplejo .servicios ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.bodyComplejo .servicios ul li {
+  list-style: none;
+  padding-inline: 20px;
+  margin-top: 10px;
+}
+.bodyComplejo .servicios ul li #areasWifi {
+  width: 100px;
+}
+.bodyComplejo .containerServicios {
   grid-area: containerServicios;
   display: flex;
   background-color: #EBEBEB;
@@ -313,685 +252,516 @@ aside p {
   align-items: center;
   padding: 50px;
 }
-
-.serviciosPadre {
-  background-image: url("../img/background_img/combo_de_servicios_xl.png");
+.bodyComplejo .containerServicios .serviciosPadre {
+  background-image: url("../img/el_complejo/combo_de_servicios_xl.png");
   width: 1189px;
   height: 1189px;
 }
-
-.listaContactos {
-  display: none;
+.bodyComplejo footer {
+  overflow: hidden;
+  grid-area: footerComplejo;
 }
-
-.empresa {
-  background-color: #2A251F;
+.bodyComplejo footer .footerComplejo {
+  position: absolute;
+  width: 100%;
+  height: 25vh;
   display: flex;
   justify-content: center;
-  color: white;
-  font-family: poppins;
-  width: 200%;
+  align-items: center;
+  background: linear-gradient(to bottom, #a19a57, #585041);
+  overflow: hidden;
+  border-top: 1px solid rgb(94, 89, 77);
 }
-
-.empresa p {
-  padding: 5px;
-  font-size: 14px;
+.bodyComplejo footer .footerComplejo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background: #ff0;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.bodyComplejo footer .footerComplejo .color {
+  position: absolute;
+  filter: blur(150px);
+}
+.bodyComplejo footer .footerComplejo .color:nth-child(1) {
+  top: -350px;
+  background: #6e6a4f;
+  width: 600px;
+  height: 600px;
+}
+.bodyComplejo footer .footerComplejo .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  background: #615e49;
+  width: 500px;
+  height: 500px;
+}
+.bodyComplejo footer .footerComplejo .color:nth-child(3) {
+  bottom: -50px;
+  right: 0;
+  background: #536758;
+  width: 300px;
+  height: 300px;
+}
+.bodyComplejo footer ul {
+  position: relative;
+  display: flex;
+}
+.bodyComplejo footer ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px;
+}
+.bodyComplejo footer ul li a {
+  position: relative;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 1;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  overflow: hidden;
+  transition: top 0.5s, z-index 0s, transform 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s;
+}
+.bodyComplejo footer ul li a:hover {
+  transition-delay: 0s, 0.5s, 0.5s;
+  top: -50px;
+  transform: translateY(50px);
+  z-index: 11;
+}
+.bodyComplejo footer ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+.bodyComplejo footer ul li a:hover::before {
+  transform: skewX(45deg) translateX(-150px);
 }
 
 @media (min-width: 1920px) {
   .bodyComplejo {
     grid-template-rows: auto 860px auto auto auto;
   }
-  aside p {
+  .bodyComplejo aside p {
     font-size: 20px;
   }
-  .servicios {
-    grid-area: servicios;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  section div h3 {
-    margin-top: 20px;
-  }
-  .servicios div ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
+  .bodyComplejo .servicios div ul {
     width: 100%;
   }
-  .servicios div ul li {
-    list-style: none;
+  .bodyComplejo .servicios div ul li {
     padding-inline: 80px;
-    margin-top: 10px;
   }
-  #areasWifi {
-    width: 100px;
+}
+@media (max-width: 1367px) {
+  footer .footerComplejo::before {
+    display: none;
   }
-  .footerComplejo {
-    grid-area: footerComplejo;
-    background-color: black;
-    opacity: 75%;
-  }
-  .listaContactos {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: poppins;
-  }
-  #opcionesDeContacto {
-    margin-left: 45px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .apps {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 20%;
-    margin-left: 5%;
-    margin-top: 15px;
-  }
-  .datosContacto {
-    display: flex;
-    justify-content: left;
-    margin-left: 7%;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    list-style: none;
-  }
-  #mmfacebook {
-    margin-left: 320px;
-  }
-  #mminstagram {
-    margin-left: 330px;
-  }
-  #mmadress {
-    margin-left: 320px;
+  footer ul li a {
+    width: 60px;
+    height: 60px;
   }
 }
 @media (min-width: 1200px) {
   .servicios {
-    grid-area: servicios;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   section div h3 {
     margin-top: 20px;
   }
-  .servicios div ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-  }
-  .servicios div ul li {
-    list-style: none;
-    padding-inline: 20px;
-    margin-top: 10px;
-  }
-  #areasWifi {
-    width: 100px;
-  }
-  .footerComplejo {
-    grid-area: footerComplejo;
-    background-color: black;
-    opacity: 75%;
-  }
-  .listaContactos {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: poppins;
-  }
-  #opcionesDeContacto {
-    margin-left: 50px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .apps {
-    display: flex;
-    justify-content: left;
-    margin-left: 70px;
-    margin-top: 5px;
-  }
-  .apps li {
-    margin-left: 170px;
-  }
-  #mmwp {
-    margin-left: 0;
-  }
-  .datosContacto {
-    display: flex;
-    justify-content: left;
-    margin-left: 80px;
-    margin-bottom: 20px;
-    list-style: none;
-  }
-  #mmfacebook {
-    margin-left: 130px;
-  }
-  #mminstagram {
-    margin-left: 130px;
-  }
-  #mmadress {
-    margin-left: 130px;
-  }
-  .empresa {
-    width: 100%;
-  }
 }
 @media (min-width: 910px) and (max-width: 1199px) {
   .bodyComplejo {
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto 700px auto auto auto;
     grid-template-areas: "header" "aside" "servicios" "containerServicios" "footerComplejo";
   }
-  .containerComplejo {
+  .bodyComplejo .containerComplejo {
     display: none;
   }
-  #complejoImg {
+  .bodyComplejo .containerComplejo #complejoImg {
     display: none;
   }
-  aside {
-    background-image: url(../img/background_img/complejo_high.jpg);
+  .bodyComplejo aside {
+    background-image: url(../img/el_complejo/complejo_high.jpg);
     background-repeat: no-repeat;
   }
-  #espacios {
-    color: #E8CB9D;
-  }
-  .containerServicios {
-    grid-area: containerServicios;
-    display: flex;
-    background-color: #EBEBEB;
-    flex-direction: column;
-    align-items: center;
-  }
-  .serviciosPadre {
-    background-image: url("../img/background_img/combo_de_servicios_l.jpg");
+  .bodyComplejo .serviciosPadre {
+    background-image: url("../img/el_complejo/combo_de_servicios_l.jpg");
     width: 595px;
     height: 2378px;
-  }
-  .footerComplejo {
-    grid-area: footerComplejo;
-    background-color: black;
-    opacity: 75%;
-  }
-  .listaContactos {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: poppins;
-  }
-  #opcionesDeContacto {
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .apps {
-    display: flex;
-    justify-content: left;
-    margin-left: 40px;
-    margin-top: 5px;
-  }
-  .apps li {
-    margin-left: 100px;
-  }
-  #mmwp {
-    margin-left: 0;
-  }
-  .datosContacto {
-    display: flex;
-    justify-content: left;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    list-style: none;
-  }
-  #mmfacebook {
-    margin-left: 65px;
-  }
-  #mminstagram {
-    margin-left: 65px;
-  }
-  #mmadress {
-    margin-left: 65px;
-  }
-  .empresa {
-    width: 100%;
   }
 }
 @media (min-width: 612px) and (max-width: 909px) {
   .bodyComplejo {
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto 700px auto auto auto;
     grid-template-areas: "header" "aside" "servicios" "containerServicios" "footerComplejo";
   }
-  .containerComplejo {
+  .bodyComplejo .containerComplejo {
     display: none;
   }
-  #complejoImg {
+  .bodyComplejo .containerComplejo #complejoImg {
     display: none;
   }
-  aside {
-    background-image: url(../img/background_img/complejo_high.jpg);
+  .bodyComplejo aside {
+    background-image: url(../img/el_complejo/complejo_high.jpg);
     background-repeat: no-repeat;
   }
-  #espacios {
-    color: #E8CB9D;
-  }
-  .containerServicios {
-    grid-area: containerServicios;
-    display: flex;
-    background-color: #EBEBEB;
-    flex-direction: column;
-    align-items: center;
-  }
-  .serviciosPadre {
-    background-image: url("../img/background_img/combo_de_servicios_l.jpg");
+  .bodyComplejo .serviciosPadre {
+    background-image: url("../img/el_complejo/combo_de_servicios_l.jpg");
     width: 595px;
     height: 2378px;
   }
-  .footerComplejo {
-    grid-area: footerComplejo;
-    background-color: black;
-    opacity: 75%;
-  }
-  .listaContactos {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: poppins;
-  }
-  #opcionesDeContacto {
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .apps {
-    display: flex;
-    justify-content: left;
-    margin-left: 40px;
-    margin-top: 5px;
-  }
-  .apps li {
-    margin-left: 100px;
-  }
-  #mmwp {
-    margin-left: 0;
-  }
-  #adress {
-    display: none;
-  }
-  .datosContacto {
-    display: flex;
-    justify-content: left;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    list-style: none;
-  }
-  #mmfacebook {
-    margin-left: 65px;
-  }
-  #mminstagram {
-    margin-left: 65px;
-  }
-  #mmadress {
-    display: none;
-  }
-  .empresa {
-    width: 100%;
-  }
 }
-@media (min-width: 360px) and (max-width: 611px) {
+@media (max-width: 611px) {
   .bodyComplejo {
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto 500px auto auto auto;
     grid-template-areas: "header" "aside" "servicios" "containerServicios" "footerComplejo";
   }
-  .containerComplejo {
+  .bodyComplejo .containerComplejo {
     display: none;
   }
-  #complejoImg {
+  .bodyComplejo .containerComplejo #complejoImg {
     display: none;
   }
-  aside {
-    background-image: url(../img/background_img/complejo_high.jpg);
+  .bodyComplejo aside {
+    background-image: url(../img/el_complejo/complejo_high.jpg);
     background-repeat: no-repeat;
   }
-  #subtituloComplejo {
+  .bodyComplejo aside #subtituloComplejo {
     font-size: 14px;
   }
-  aside h1 {
+  .bodyComplejo aside h1 {
     font-size: 60px;
     line-height: 50px;
     letter-spacing: 2px;
   }
-  aside p {
+  .bodyComplejo aside p {
     margin-top: 30px;
     font-size: 11px;
   }
-  .containerServicios {
-    grid-area: containerServicios;
-    display: flex;
-    background-color: #EBEBEB;
-    flex-direction: column;
-    align-items: center;
-  }
-  .serviciosPadre {
-    background-image: url("../img/background_img/combo_de_servicios_s.jpg");
+  .bodyComplejo .serviciosPadre {
+    background-image: url("../img/el_complejo/combo_de_servicios_s.jpg");
     width: 355px;
     height: 1439px;
   }
-  .footerComplejo {
-    grid-area: footerComplejo;
-    background-color: black;
-    opacity: 75%;
-  }
-  .listaContactos {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: poppins;
-  }
-  #opcionesDeContacto {
-    margin-left: 15px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .apps {
-    display: flex;
-    justify-content: left;
-    margin-left: 20px;
-    margin-top: 5px;
-  }
-  .apps li {
-    margin-left: 70px;
-  }
-  #mmwp {
-    margin-left: 0;
-  }
-  #facebook {
-    display: none;
-  }
-  #adress {
-    display: none;
-  }
-  .datosContacto {
-    display: flex;
-    justify-content: left;
-    margin-left: 25px;
-    margin-bottom: 20px;
-    list-style: none;
-    margin-top: -10px;
-  }
-  #mmfacebook {
-    display: none;
-  }
-  #mminstagram {
-    margin-left: 30px;
-  }
-  #mmadress {
-    display: none;
-  }
-  .empresa {
-    width: 100%;
+  .bodyComplejo footer ul {
+    margin-right: 30px;
   }
 }
 @media (max-width: 359px) {
   .bodyComplejo {
-    display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: auto 85vh auto;
+    grid-template-rows: auto 65vh auto;
     grid-template-areas: "header" "aside" "footerComplejo";
+    overflow: hidden;
   }
-  .containerComplejo {
+  .bodyComplejo .containerComplejo {
     display: none;
   }
-  #complejoImg {
+  .bodyComplejo .containerComplejo #complejoImg {
     display: none;
   }
-  aside {
-    background-image: url(../img/background_img/complejo_high.jpg);
+  .bodyComplejo aside {
+    background-image: url(../img/el_complejo/complejo_high.jpg);
     background-repeat: no-repeat;
   }
-  #subtituloComplejo {
+  .bodyComplejo aside #subtituloComplejo {
     font-size: 14px;
   }
-  aside h1 {
+  .bodyComplejo aside h1 {
     font-size: 50px;
     line-height: 40px;
     letter-spacing: 1px;
   }
-  aside p {
+  .bodyComplejo aside p {
     margin-top: 30px;
     font-size: 9px;
   }
-  .containerServicios {
+  .bodyComplejo .serviciosPadre {
     display: none;
   }
-  .serviciosPadre {
-    display: none;
+  .bodyComplejo footer ul {
+    margin-right: 30px;
   }
-  .footerComplejo {
-    grid-area: footerComplejo;
-    background-color: black;
-    opacity: 75%;
-  }
-  .empresa {
-    width: 100%;
+  .bodyComplejo footer ul a {
+    width: 50px;
+    height: 50px;
   }
 }
-/* RESERVAR SUITE PAGE */
+/* NUESTRAS SUITES */
 .bodyReservas {
   display: grid;
-  grid-template-rows: 75px auto;
+  grid-template-rows: auto auto;
   grid-template-areas: "header" "sectionReservas";
+  overflow: hidden;
 }
 
 .sectionReservas {
-  grid-area: sectionReservas;
-  background-image: url(../img/imagen_de_fondo_suites.png);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
+  background-color: #000;
+  height: 95vh;
+}
+.sectionReservas .contenedorImg {
+  overflow: hidden;
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  height: 638px;
+}
+.sectionReservas .contenedorImg img {
+  opacity: 0.7;
+}
+.sectionReservas .contenedorImg .contenedorTxt {
+  text-align: center;
+  position: absolute;
+  font-family: lora;
+  width: 100%;
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+.sectionReservas .contenedorImg .contenedorTxt h2 {
+  color: #fff;
+  padding-top: 100%;
+  padding-bottom: 100%;
+  font-size: 2.5rem;
+}
+.sectionReservas .contenedorImg .contenedorTxt a {
+  text-decoration: none;
 }
 
-.suites {
-  width: 300px;
-  transition: 1s;
-}
-
-.suites:hover {
-  width: 350px;
-}
-
-@media (min-width: 1920px) {
+@media (min-width: 1370px) {
   .sectionReservas {
-    height: 854px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    background-color: #000;
+    height: 94vh;
   }
-  .suites {
-    width: 400px;
+  .contenedorImg {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  .contenedorImg:hover {
+    opacity: 1;
+  }
+  .contenedorImg .contenedorTxt {
+    text-align: center;
+    position: absolute;
+    font-family: lora;
+    width: 100%;
+    padding-top: 100%;
+    padding-bottom: 100%;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .contenedorImg .contenedorTxt:hover {
+    opacity: 1;
+  }
+  .contenedorImg .contenedorTxt h2 {
+    color: #fff;
     transition: 1s;
+    padding-top: 100%;
+    padding-bottom: 100%;
   }
-  .suites:hover {
-    width: 435px;
+  .contenedorImg .contenedorTxt h2:hover {
+    font-size: 3rem;
+  }
+  .contenedorImg .contenedorTxt a {
+    text-decoration: none;
   }
 }
-/* RESENIAS DE MONTEMOLINO PAGE */
-/* UBICACION PAGE */
+@media (max-width: 540px) {
+  .sectionReservas h2 {
+    font-size: 1.5rem;
+  }
+}
+/* UBICACION */
 .bodyUbicacion {
   display: grid;
-  grid-template-rows: 75px auto auto;
-  grid-template-areas: "header" "sectionUbicacion" "footerUbicacion";
+  grid-template-rows: auto auto;
+  grid-template-areas: "header" "sectionUbicacion";
+  overflow: hidden;
 }
-
-.sectionUbicacion {
+.bodyUbicacion .sectionUbicacion {
   grid-area: sectionUbicacion;
   width: 100%;
 }
-
-.map {
+.bodyUbicacion .sectionUbicacion .map {
   width: 100%;
-  height: 604px;
+  height: 93vh;
 }
 
-@media (min-width: 1920px) {
-  .map {
-    height: 819px;
-  }
-}
-.footerUbicacion {
-  grid-area: footerUbicacion;
-}
-
-/* CONTACTO PAGE */
+/* CONTACTO */
 .bodyContacto {
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-areas: "header" "sectionContacto" "footerContacto";
 }
-
-.sectionContacto {
+.bodyContacto .sectionContacto {
   grid-area: sectionContacto;
-  background-image: url(../img/imagen_de_fondo_contacto.png);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contactoGeneral {
+  font-family: Poppins;
+  padding: 2rem 2rem;
   background-color: black;
-  opacity: 80%;
   color: white;
-  margin: 10%;
-  padding: 25px;
-  border-radius: 20px;
+}
+.bodyContacto .sectionContacto .contactoGeneral {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+}
+.bodyContacto .sectionContacto .contactoGeneral .contactoGeneral > * {
+  padding: 1em;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_form {
+  background-color: #222222;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "TituloContacto TituloMail" "OpcionesContacto OpcionesMail" "HTV HTV";
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  row-gap: 15px;
-  align-items: flex-start;
-  justify-content: left;
+  grid-template-columns: 1fr 1fr;
 }
-
-.TituloContacto {
-  grid-area: TituloContacto;
-  font-size: 14px;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form .block {
+  grid-column: 1/3;
 }
-
-.TituloMail {
-  grid-area: TituloMail;
-  font-size: 14px;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form p {
+  margin: 0;
+  padding: 1em;
 }
-
-.OpcionesContacto {
-  grid-area: OpcionesContacto;
-  font-size: 14px;
-  list-style: none;
-  margin-left: 20px;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form button {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 1px solid #D5CCB4;
+  background-color: #D5CCB4;
+  color: #000;
+  border: none;
+  text-transform: uppercase;
+  padding: 1em;
 }
-
-.OpcionesContacto li {
-  padding: 5px;
-}
-
-.lista {
-  list-style: circle;
-}
-
-.OpcionesContacto li a {
-  text-decoration: none;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form button:hover {
+  background-color: #701726;
   color: #D5CCB4;
 }
-
-.liDatos {
-  margin-left: 20px;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form button:focus {
+  background-color: #701726;
+  color: #D5CCB4;
 }
-
-.OpcionesMail {
-  grid-area: OpcionesMail;
-  margin-left: 20px;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form input {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  border-bottom: 1px solid #D5CCB4;
 }
-
-.OpcionesMail input {
-  padding-inline: 20px;
-  color: black;
-  background-color: white;
-  opacity: 75%;
+.bodyContacto .sectionContacto .contactoGeneral .contact_form form textarea {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  border-bottom: 1px solid #D5CCB4;
 }
-
-#asunto {
-  width: 89.5%;
-  margin-top: 10px;
+.bodyContacto .sectionContacto .contactoGeneral .contact_info {
+  background-color: #000;
 }
-
-#consulta {
-  width: 89.5%;
-  height: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#send {
-  background-color: #D5CCB4;
-  color: #701726;
-  font-family: lora;
-  border: 2px;
-  padding-left: 5px;
-  padding-top: 1px;
-  padding-right: 5px;
-  padding-bottom: 1px;
-}
-
-.HTV {
-  grid-area: HTV;
+.bodyContacto .sectionContacto .contactoGeneral .contact_info h4 {
   text-align: center;
-  font-size: 14px;
-  margin-bottom: -20px;
-  margin-top: 10px;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_info ul li {
+  padding: 0.3em;
+  margin-left: -25px;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_info ul li a {
+  text-decoration: none;
+  color: white;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_info ul li a:hover {
+  color: green;
+}
+.bodyContacto .sectionContacto .contactoGeneral .contact_info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  list-style: none;
+}
+.bodyContacto .footerContacto {
+  grid-area: footerContacto;
+  width: 100%;
+  text-align: center;
+  background-color: #AA9D7A;
+  color: #2A251F;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1200px) {
   .sectionContacto {
-    height: 823px;
+    padding: 4rem 4rem;
+    height: 100vh;
+    background-image: url(../img/contacto/contacto.png);
   }
-  .TituloContacto {
-    font-size: 16px;
+  .sectionContacto .contactoGeneral {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
-  .TituloMail {
-    font-size: 16px;
+  .sectionContacto .contactoGeneral .contactoGeneral > * {
+    padding: 2em;
   }
-  .OpcionesContacto {
-    font-size: 16px;
-    margin-left: 40px;
+  .sectionContacto .contactoGeneral .contact_info h4 {
+    padding: 0.5em;
+    text-align: left;
   }
-  .OpcionesContacto li {
-    padding: 10px;
+  .sectionContacto .contactoGeneral .contact_info ul {
+    padding: 0.5em;
+    text-align: left;
   }
-  .liDatos {
-    margin-bottom: 5px;
+  .sectionContacto .contactoGeneral .contact_info ul li {
+    margin-left: 0;
   }
-  .OpcionesMail input {
-    margin-top: 10px;
-    padding: 10px;
+  .sectionContacto .contactoGeneral .contact_info p {
+    padding: 0.5em;
+    text-align: left;
   }
-  #asunto {
-    width: 94%;
-  }
-  #consulta {
-    width: 94%;
-  }
-}
-.footerContacto {
-  grid-area: footerContacto;
 }/*# sourceMappingURL=style.css.map */
